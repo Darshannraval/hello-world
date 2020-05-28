@@ -2,10 +2,6 @@ currentBuild.displayName = "hello-world-#"+currentBuild.number
 
 pipeline{
     agent any
-    
-    environment{
-        PATH = "/opt/apachemaven/bin:$PATH"
-    }
     stages{
         stage("Git Checkout"){
             steps{

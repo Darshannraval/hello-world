@@ -4,7 +4,7 @@ pipeline {
   stage('Stage 1') {
       steps {
         script {
-          echo 'Stage 1'
+          sh 'mvn clean test'
         }
       }
     }

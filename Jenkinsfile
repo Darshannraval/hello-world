@@ -13,7 +13,7 @@ pipeline{
 
         stage("Maven Build"){
             steps{
-                sh "mvn -Dmaven.test.failure.ignore=true install"
+                sh "mvn "-Dorg.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS=true clean test
             }
         }
 

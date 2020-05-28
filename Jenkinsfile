@@ -2,10 +2,6 @@ currentBuild.displayName = "hello-world-#"+currentBuild.number
 
 pipeline{
     agent any
- tools { 
-        maven 'Maven 3.6.5' 
-        jdk 'jdk8' 
-    }
 
  environment{
      JAVA_HOME='/usr/lib/jvm/java-1.8.0-openjdk-amd64/'
@@ -23,7 +19,8 @@ pipeline{
 
         stage("Maven Build"){
             steps{
-                sh label: '', script: 'mvn clean test'
+              def mvnHome= tool name: 'maven', type: 'maven'
+                sh "${mvnHome}/bin/mvn clean test"
             }
         }
 

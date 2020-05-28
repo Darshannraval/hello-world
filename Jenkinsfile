@@ -19,7 +19,7 @@ pipeline{
 
         stage("Maven Build"){
             steps{
-                sh "mvn clean test"
+                sh label: '', script: 'mvn clean test'
             }
         }
 

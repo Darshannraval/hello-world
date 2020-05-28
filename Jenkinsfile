@@ -9,7 +9,6 @@ pipeline{
      MAVEN_HOME=/opt/apache-maven/bin
      PATH=${M2_HOME}/bin
 }
-}
     stages{
 
         stage("Maven Build"){

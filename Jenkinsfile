@@ -15,8 +15,7 @@ pipeline{
         }
         stage("Maven Build"){
             steps{
-                sh "mvn clean package"
-                sh "mv target/*.war target/myweb.war"
+                sh 'mvn clean test'
             }
         }
         stage("deploy-dev"){

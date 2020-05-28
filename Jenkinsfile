@@ -1,10 +1,15 @@
 pipeline {
   agent any
+
+  environment{
+  MAVEN_HOME=/opt/apache-maven/bin
+}
+
   stages {
   stage('Stage 1') {
       steps {
         script {
-          sh 'mvn clean test'
+          sh 'mvn -B deploy'
         }
       }
     }

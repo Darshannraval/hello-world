@@ -10,6 +10,12 @@ pipeline{
      PATH='${M2_HOME}/bin:${PATH}'
 }
     stages{
+       stage ("Git Checkout"){
+       steps{
+         git credentialsId: '9b3b4cf9-f14a-4432-ae37-ed975a50539b', 
+         url: 'https://github.com/Darshannraval/hello-world'
+       }
+} 
 
         stage("Maven Build"){
             steps{

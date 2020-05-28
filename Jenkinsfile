@@ -13,7 +13,7 @@ pipeline{
 
         stage("Maven Build"){
             steps{
-                sh "mvn "-Dorg.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS=true clean test
+                sh "mvn -Dorg.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS=true clean test"
             }
         }
 

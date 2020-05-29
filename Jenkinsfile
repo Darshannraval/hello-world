@@ -25,9 +25,9 @@ pipeline{
        stage("Docker build image"){
         steps{
           withCredentials([usernamePassword(credentialsId: '5d5db4d9-53aa-439b-94eb-c6e163ed8e2a', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USER')]) {
-         sh "docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}"
+         sh "sudo docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}"
 }
-         sh "docker build . -t my-app  "        
+         sh "sudo docker build . -t my-app  "        
       } 
       }
 

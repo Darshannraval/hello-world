@@ -30,12 +30,6 @@ pipeline{
              } 
         }
        
-       stage('Docker - Push'){
-             steps{
-		  sh "docker push -t darshannraval"
-		  }
-	}          
-
   }
 
 }

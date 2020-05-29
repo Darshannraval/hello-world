@@ -16,11 +16,16 @@ pipeline{
        } 
 
        stage("Maven Build"){
-            steps{
-               sh "mvn clean package"
-               sh "mv target/my-app-1.0-SNAPSHOT.jar target/my-app.jar"  
-                 }
+       steps{
+           sh "mvn clean package"
+           sh "mv target/my-app-1.0-SNAPSHOT.jar target/my-app.jar"  
+            }
         }
+       stage("Docker build image"){
+        steps{
+           sh "docker build . -t my-app"
+         }
+      }
 
     }
 }

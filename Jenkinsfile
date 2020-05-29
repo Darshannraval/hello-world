@@ -18,7 +18,6 @@ pipeline{
        stage("Maven Build"){
             steps{
                sh "mvn clean package"
-               sh "mv ~/target/my-app*.jar ~/target/hello.jar"  
                  }
         }
 

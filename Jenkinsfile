@@ -6,7 +6,6 @@ pipeline{
          PATH = "/opt/apache-maven-3.6.3/bin:$PATH"
          registry = "darshannraval"
          registryCredential = 'dockerhub_id'
-         DOCKER_TAG = "${getLatestCommitId()}"
  }
 
     stages{
@@ -33,7 +32,7 @@ pipeline{
        
        stage('Docker - Push'){
              steps{
-		  sh "docker push ${DOCKER_TAG}"
+		  sh "docker push "
 		  }
 	}          
 

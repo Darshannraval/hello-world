@@ -32,7 +32,7 @@ pipeline{
        
        stage('Docker - Push'){
              steps{
-		  sh "docker push "
+		  sh "docker push -t darshannraval"
 		  }
 	}          
 

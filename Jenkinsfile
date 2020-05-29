@@ -23,11 +23,11 @@ pipeline{
            sh "mv target/my-app-1.0-SNAPSHOT.jar target/my-app.jar"  
             }
         }
-}
+
        stage("Docker build image"){
         steps{
          script{ dockerImage = docker.build registry }    
              } 
-      }
+        }
 
   }

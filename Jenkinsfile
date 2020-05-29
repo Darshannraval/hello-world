@@ -4,6 +4,8 @@ pipeline{
     agent any
     environment{
          PATH = "/opt/apache-maven-3.6.3/bin:$PATH"
+         registry = "darshannraval"
+         registryCredential = 'dockerhub_id'
  }
 
     stages{
@@ -24,12 +26,8 @@ pipeline{
 
        stage("Docker build image"){
         steps{
-          withCredentials([usernamePassword(credentialsId: '5d5db4d9-53aa-439b-94eb-c6e163ed8e2a', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USER')]) {
-         sh "sudo docker login"
-}
-         sh "sudo docker build . -t my-app  "        
-      } 
+         script{ dockerImage = docker.build registry }    
+             } 
       }
 
-    }
-}
+  }

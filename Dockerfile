@@ -2,5 +2,6 @@
 From tomcat:8-jre8 
 
 # Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./my-app.jar /usr/local/tomcat/webapps
+MAINTAINER "valaxytech@gmail.com"
+WORKDIR /Jenkins 
+COPY ./my-app.jar /Jenkins

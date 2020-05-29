@@ -4,4 +4,4 @@ From tomcat:8-jre8
 # Maintainer 
 MAINTAINER "valaxytech@gmail.com"
 WORKDIR /Jenkins 
-COPY ./my-app.jar /Jenkins
+COPY ~/target/my-app.jar /Jenkins

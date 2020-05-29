@@ -29,7 +29,7 @@ pipeline{
          sh "docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}"
 }
          sh "docker build . -t ${DOCKER_TAG} "        
-       
+      } 
       }
 
     }

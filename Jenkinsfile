@@ -28,6 +28,5 @@ pipeline{
         sh "echi $AWS_SECRET_ACCESS_KEY"
 }
        
-  }
 
 }

@@ -25,7 +25,7 @@ pipeline{
 
        stage("AWS Credentials"){
        steps{
-         echo "$AWS_ACCESS_KEY_ID"
+         echo "${env.AWS_ACCESS_KEY_ID}"
             }
        }
 }

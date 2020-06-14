@@ -4,6 +4,7 @@ pipeline{
     agent any
     environment{
          PATH = "/opt/apache-maven-3.6.3/bin:$PATH"
+         AWS_ACCESS_KEY_ID = "darshan" 
  }
 
     stages{

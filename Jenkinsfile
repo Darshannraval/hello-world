@@ -24,11 +24,7 @@ pipeline{
 
        stage("AWS Credentials"){
        steps{
-        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-        sh "echo $AWS_ACCESS_KEY_ID"
-        sh "echi $AWS_SECRET_ACCESS_KEY"
-}
-}       
-}
-}
+         echo "$AWS_ACCESS_KEY_ID"
+            }
+       }
 }

@@ -27,6 +27,6 @@ pipeline{
         sh "echo $AWS_ACCESS_KEY_ID"
         sh "echi $AWS_SECRET_ACCESS_KEY"
 }
-       
+}       
 
 }
